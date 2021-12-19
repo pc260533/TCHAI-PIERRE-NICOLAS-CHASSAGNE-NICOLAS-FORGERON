@@ -110,6 +110,7 @@
     <Compile Include="tchai3\stockage\__init__.py" />
     <Compile Include="tchai3\tests\mainAttaque1.py" />
     <Compile Include="tchai3\tests\mainAttaque2.py" />
+    <Compile Include="tchai3\tests\mainAttaque3.py" />
     <Compile Include="tchai3\views\AfficherSoldeCompteView.py" />
     <Compile Include="tchai3\views\AfficherTransactionsAvecUtilisateurView.py" />
     <Compile Include="tchai3\views\AfficherTransactionsView.py" />

@@ -269,3 +269,12 @@ On supprimela première transaction de test1 vers test2.
 Après l'attaque, on détecte la transaction suivant la transaction qui a été supprimée.
 Le hash de la transaction détecté est recalculé et ne correspond pas au hash stocké car il est calculé avec la transaction précédente et celle-ci a été supprimée.
 On détecte donc l'attaque.
+
+### Exercice 11
+__Attaque 3__  
+Pour exécuter l'attaque 2, on exécute le fichier ```tchaiv3/tests/mainAttaque2.py```.
+Celui-ci crée deux utilisateurs, trois transactions de test1 vers test 2.
+On supprimela première transaction de test1 vers test2.  
+Après l'attaque, on détecte la transaction suivant la transaction qui a été supprimée.
+Le hash de la transaction détecté est recalculé et ne correspond pas au hash stocké car il est calculé avec la transaction précédente et celle-ci a été supprimée.
+On détecte donc l'attaque.
