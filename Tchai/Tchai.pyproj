@@ -55,6 +55,16 @@
     <Folder Include="tchai3\tests\" />
     <Folder Include="tchai3\views\" />
     <Folder Include="tchai3\views\__pycache__\" />
+    <Folder Include="tchai4\" />
+    <Folder Include="tchai4\exceptions\" />
+    <Folder Include="tchai4\exceptions\__pycache__\" />
+    <Folder Include="tchai4\modele\" />
+    <Folder Include="tchai4\modele\__pycache__\" />
+    <Folder Include="tchai4\stockage\" />
+    <Folder Include="tchai4\stockage\__pycache__\" />
+    <Folder Include="tchai4\templates\" />
+    <Folder Include="tchai4\views\" />
+    <Folder Include="tchai4\views\__pycache__\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="tchai1\exceptions\ExceptionGestionBaseDeDonnees.py" />
@@ -119,6 +129,28 @@
     <Compile Include="tchai3\views\VerifierIntegriteTransactionsView.py" />
     <Compile Include="tchai3\views\ViewTchai.py" />
     <Compile Include="tchai3\views\__init__.py" />
+    <Compile Include="tchai4\exceptions\ExceptionGestionBaseDeDonnees.py" />
+    <Compile Include="tchai4\exceptions\ExceptionGestionFichiers.py" />
+    <Compile Include="tchai4\exceptions\ExceptionMontantTransaction.py" />
+    <Compile Include="tchai4\exceptions\ExceptionParsageJson.py" />
+    <Compile Include="tchai4\exceptions\ExceptionSerializable.py" />
+    <Compile Include="tchai4\exceptions\ExceptionSignature.py" />
+    <Compile Include="tchai4\exceptions\__init__.py" />
+    <Compile Include="tchai4\main.py" />
+    <Compile Include="tchai4\modele\Transaction.py" />
+    <Compile Include="tchai4\modele\Utilisateur.py" />
+    <Compile Include="tchai4\modele\__init__.py" />
+    <Compile Include="tchai4\stockage\StockageBaseDeDonnees.py" />
+    <Compile Include="tchai4\stockage\__init__.py" />
+    <Compile Include="tchai4\views\AfficherSoldeCompteView.py" />
+    <Compile Include="tchai4\views\AfficherTransactionsAvecUtilisateurView.py" />
+    <Compile Include="tchai4\views\AfficherTransactionsView.py" />
+    <Compile Include="tchai4\views\AjouterUtilisateurView.py" />
+    <Compile Include="tchai4\views\EnregistrerTransactionView.py" />
+    <Compile Include="tchai4\views\SignerTransactionView.py" />
+    <Compile Include="tchai4\views\VerifierIntegriteTransactionsView.py" />
+    <Compile Include="tchai4\views\ViewTchai.py" />
+    <Compile Include="tchai4\views\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="tchai1\exceptions\__pycache__\ExceptionGestionBaseDeDonnees.cpython-36.pyc" />
@@ -195,6 +227,35 @@
     <Content Include="tchai3\views\__pycache__\VerifierIntegriteTransactionsView.cpython-36.pyc" />
     <Content Include="tchai3\views\__pycache__\ViewTchai.cpython-36.pyc" />
     <Content Include="tchai3\views\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="tchai4\exceptions\__pycache__\ExceptionGestionBaseDeDonnees.cpython-36.pyc" />
+    <Content Include="tchai4\exceptions\__pycache__\ExceptionGestionFichiers.cpython-36.pyc" />
+    <Content Include="tchai4\exceptions\__pycache__\ExceptionMontantTransaction.cpython-36.pyc" />
+    <Content Include="tchai4\exceptions\__pycache__\ExceptionParsageJson.cpython-36.pyc" />
+    <Content Include="tchai4\exceptions\__pycache__\ExceptionSerializable.cpython-36.pyc" />
+    <Content Include="tchai4\exceptions\__pycache__\ExceptionSignature.cpython-36.pyc" />
+    <Content Include="tchai4\exceptions\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="tchai4\modele\__pycache__\Transaction.cpython-36.pyc" />
+    <Content Include="tchai4\modele\__pycache__\Utilisateur.cpython-36.pyc" />
+    <Content Include="tchai4\modele\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="tchai4\stockage\__pycache__\StockageBaseDeDonnees.cpython-36.pyc" />
+    <Content Include="tchai4\stockage\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="tchai4\templates\afficherSoldeCompteConfirmation.html" />
+    <Content Include="tchai4\templates\afficherTransactionsAvecUtilisateurConfirmation.html" />
+    <Content Include="tchai4\templates\afficherTransactionsConfirmation.html" />
+    <Content Include="tchai4\templates\ajouterUtilisateurConfirmation.html" />
+    <Content Include="tchai4\templates\enregistrerTransactionConfirmation.html" />
+    <Content Include="tchai4\templates\exceptionMessage.html" />
+    <Content Include="tchai4\templates\signerTransactionConfirmation.html" />
+    <Content Include="tchai4\templates\verifierIntegriteTransactionsConfirmation.html" />
+    <Content Include="tchai4\views\__pycache__\AfficherSoldeCompteView.cpython-36.pyc" />
+    <Content Include="tchai4\views\__pycache__\AfficherTransactionsAvecUtilisateurView.cpython-36.pyc" />
+    <Content Include="tchai4\views\__pycache__\AfficherTransactionsView.cpython-36.pyc" />
+    <Content Include="tchai4\views\__pycache__\AjouterUtilisateurView.cpython-36.pyc" />
+    <Content Include="tchai4\views\__pycache__\EnregistrerTransactionView.cpython-36.pyc" />
+    <Content Include="tchai4\views\__pycache__\SignerTransactionView.cpython-36.pyc" />
+    <Content Include="tchai4\views\__pycache__\VerifierIntegriteTransactionsView.cpython-36.pyc" />
+    <Content Include="tchai4\views\__pycache__\ViewTchai.cpython-36.pyc" />
+    <Content Include="tchai4\views\__pycache__\__init__.cpython-36.pyc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
