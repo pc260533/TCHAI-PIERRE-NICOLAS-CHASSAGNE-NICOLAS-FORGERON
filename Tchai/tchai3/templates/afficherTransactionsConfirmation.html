@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    La liste des transactions dans l'ordre chronologiques est :
+    {% for transaction in listeTransactions %}
+    <div>{{ transaction.nomUtilisateur1 }} a donné {{ transaction.montantTransaction }} à {{ transaction.nomUtilisateur2 }} le {{ transaction.dateTransaction }} -> hash : {{ transaction.hashTransaction }}</div>
+    {% endfor %}
+</body>
+</html>

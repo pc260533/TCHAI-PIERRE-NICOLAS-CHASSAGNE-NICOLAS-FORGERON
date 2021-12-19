@@ -229,8 +229,8 @@ La réponse envoyée est :
 </body>
 
 </html>
-```
 
+```
 ### Exercice 7
 __Attaque 1__
 Pour exécuter l'attaque 1, on exécute le fichier ```tchaiv2/tests/mainAttaque1.py```.
@@ -244,3 +244,14 @@ Celui-ci crée deux utilisateurs, trois transactions de test1 vers test 2.
 On supprime la première transaction de test1 vers test2.  
 Après l'attaque, on ne peut pas détecter la transaction qui a été supprimée grâce au hash de chaque transaction car la vérification se base sur le hash de chaque transaction de manière unitaire.
 On doit donc dans la version 3 calculer le hash avec la transaction en cours et les valeurs de la transaction précédente.
+
+
+## Tchai v3
+Pour exécuter tchai v2, on exécute le fichier ```tchaiv3/main.py```.
+### Exercice 9
+Avant d'enregistrer une transaction, on calcule son hash en concatenant les noms d'utilisateur, le montant, la date de transaction et le hash de la transaction précédente.
+Pour le hash de la première transaction, on considère que le hash de la transaction précédente est une chaine de caractère vide.
+Par exemple le hash de la transaction ```test1test220.02021-12-17 11:13:07``` avec comme hash de la transaction précédente ```e850ddabfc8a59ca361aab0b2b8828e8``` est :
+```c6990f8374bdcb30e598076242aaaa75```
+La fonction de hachage est MD5.  
+L'API HTTP pour enregistrer une transaction reste la même.
