@@ -153,6 +153,7 @@
     <Compile Include="tchai4\views\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="requirements.txt" />
     <Content Include="tchai1\exceptions\__pycache__\ExceptionGestionBaseDeDonnees.cpython-36.pyc" />
     <Content Include="tchai1\exceptions\__pycache__\ExceptionMontantTransaction.cpython-36.pyc" />
     <Content Include="tchai1\exceptions\__pycache__\ExceptionParsageJson.cpython-36.pyc" />

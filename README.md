@@ -11,6 +11,11 @@ Chaque classe héritant de ```ViewTchai``` (```Tchai/tchaiX/views```) correspond
 Chaque View possède un lien vers le service de base de données pour persister ou récupérer des données (```Tchai/tchaiX/stockage```) dans une base de données SQLite. Elles communiquent avec ce service par un modèle composé de deux classes ```Utilisateur``` et ```Transaction``` (```Tchai/tchaiX/modele```).
 Toutes les erreurs fonctionnelles ou techniques sont catchées puis encapsulées dans une classe héritant de ```ExceptionSerializable``` (```Tchai/tchaiX/exceptions```). Un template d'erreur gère la conversion de l'exception en une page HTML.
 
+## Installation
+-	Cloner le projet,
+-	Installer les dépendances contenues dans le requirements.txt :
+```pip install -r requirements.txt```
+
 ## Auteurs
 -	__Pierre-Nicolas CHASSAGNE__ : Pierre-Nicolas_Chassagne@etu.u-bourgogne.fr,
 -	__Nicolas FORGERON__ : Nicolas_Forgeron@etu.u-bourgogne.fr.
