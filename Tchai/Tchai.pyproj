@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d20ca817-44b0-48a5-94dd-78957b4fc83a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>tchai2\main.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -79,6 +80,7 @@
     <Compile Include="tchai2\views\AfficherTransactionsView.py" />
     <Compile Include="tchai2\views\AjouterUtilisateurView.py" />
     <Compile Include="tchai2\views\EnregistrerTransactionView.py" />
+    <Compile Include="tchai2\views\VerifierIntegriteTransactionsView.py" />
     <Compile Include="tchai2\views\ViewTchai.py" />
     <Compile Include="tchai2\views\__init__.py" />
   </ItemGroup>
@@ -123,6 +125,7 @@
     <Content Include="tchai2\templates\ajouterUtilisateurConfirmation.html" />
     <Content Include="tchai2\templates\enregistrerTransactionConfirmation.html" />
     <Content Include="tchai2\templates\exceptionMessage.html" />
+    <Content Include="tchai2\templates\verifierIntegriteTransactionsConfirmation.html" />
     <Content Include="tchai2\views\__pycache__\AfficherSoldeCompteView.cpython-36.pyc" />
     <Content Include="tchai2\views\__pycache__\AfficherTransactionsAvecUtilisateurView.cpython-36.pyc" />
     <Content Include="tchai2\views\__pycache__\AfficherTransactionsView.cpython-36.pyc" />

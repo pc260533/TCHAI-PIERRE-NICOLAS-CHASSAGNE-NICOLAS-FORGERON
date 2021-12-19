@@ -206,3 +206,27 @@ Par exemple le hash de la transaction ```test1test220.02021-12-17 11:10:02``` es
 ```7789c71739fa3f40e639798b9d18e47e```  
 La fonction de hachage est MD5.  
 L'API HTTP pour enregistrer une transaction reste la même.
+
+### Exercice 6
+On ajoute l'action suivante :
+-	__Vérifier l'intégrité des transactions__ :  
+Pour vérifier l’intégrité des transactions en recalculant les hashs à partir des données et en les comparant avec les hashs stockés précédemment, on utilise l'URI :  
+```/verifierIntegriteTransactions```  
+La réponse envoyée est :
+```html
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+
+<body>
+	La liste des transactions non vérifiées dont le hash est incorrect sont :
+
+</body>
+
+</html>
+```

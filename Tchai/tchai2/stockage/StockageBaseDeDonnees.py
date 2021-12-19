@@ -126,6 +126,29 @@ class StockageBaseDeDonnees(object):
         except sqlite3.Error as errorSqlite3:
             raise ExceptionGestionBaseDeDonnees(errorSqlite3);
 
+    def chargerListeTransactionsNonVerifiees(self) -> List[Transaction]:
+        try:
+            listeTransactionsNonVerifies: List[Transaction] = [];
+            sql = "SELECT nomUtilisateur1, nomUtilisateur2, montantTransaction, dateTransaction, hashTransaction FROM transactionUtilisateurs ORDER BY dateTransaction ASC";
+            self.cursor.execute(sql);
+            lignesTransactions = self.cursor.fetchall();
+            for ligneTransaction in lignesTransactions:
+                transaction: Transaction = Transaction();
+                utilisateur1: Utilisateur = Utilisateur();
+                utilisateur1.nomUtilisateur = ligneTransaction[0];
+                transaction.utilisateur1 = utilisateur1;
+                utilisateur2: Utilisateur = Utilisateur();
+                utilisateur2.nomUtilisateur = ligneTransaction[1];
+                transaction.utilisateur2 = utilisateur2;
+                transaction.montantTransaction = ligneTransaction[2];
+                transaction.dateTransaction = datetime.strptime(ligneTransaction[3], "%Y-%m-%d %H:%M:%S");
+                transaction.hashTransaction = ligneTransaction[4];
+                if (transaction.hashTransaction != self.calculerHash(transaction)):
+                    listeTransactionsNonVerifies.append(transaction);
+            return listeTransactionsNonVerifies;
+        except sqlite3.Error as errorSqlite3:
+            raise ExceptionGestionBaseDeDonnees(errorSqlite3);
+
     def getSoldeCompte(self, nomUtilisateur: str) -> float:
         try:
             ## On charge l'utilisateur pour récupérer le montant initiale de l'utilisateur et on throw une exception s'il n'existe pas.
