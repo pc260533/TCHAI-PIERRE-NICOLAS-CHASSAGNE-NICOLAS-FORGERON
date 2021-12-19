@@ -52,6 +52,7 @@
     <Folder Include="tchai3\stockage\" />
     <Folder Include="tchai3\stockage\__pycache__\" />
     <Folder Include="tchai3\templates\" />
+    <Folder Include="tchai3\tests\" />
     <Folder Include="tchai3\views\" />
     <Folder Include="tchai3\views\__pycache__\" />
   </ItemGroup>
@@ -107,6 +108,8 @@
     <Compile Include="tchai3\modele\__init__.py" />
     <Compile Include="tchai3\stockage\StockageBaseDeDonnees.py" />
     <Compile Include="tchai3\stockage\__init__.py" />
+    <Compile Include="tchai3\tests\mainAttaque1.py" />
+    <Compile Include="tchai3\tests\mainAttaque2.py" />
     <Compile Include="tchai3\views\AfficherSoldeCompteView.py" />
     <Compile Include="tchai3\views\AfficherTransactionsAvecUtilisateurView.py" />
     <Compile Include="tchai3\views\AfficherTransactionsView.py" />

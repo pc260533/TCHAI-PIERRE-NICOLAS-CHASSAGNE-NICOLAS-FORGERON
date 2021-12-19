@@ -255,3 +255,17 @@ Par exemple le hash de la transaction ```test1test220.02021-12-17 11:13:07``` av
 ```c6990f8374bdcb30e598076242aaaa75```
 La fonction de hachage est MD5.  
 L'API HTTP pour enregistrer une transaction reste la même.
+
+### Exercice 10
+__Attaque 1__  
+Pour exécuter l'attaque 1, on exécute le fichier ```tchaiv3/tests/mainAttaque1.py```.
+Celui-ci crée deux utilisateurs, une transaction et modifie le montant de cette transaction.  
+Après l'attaque, on détecte les transactions qui ont été modfifié grâce au hash de chaque transaction.
+
+__Attaque 2__  
+Pour exécuter l'attaque 2, on exécute le fichier ```tchaiv3/tests/mainAttaque2.py```.
+Celui-ci crée deux utilisateurs, trois transactions de test1 vers test 2.
+On supprimela première transaction de test1 vers test2.  
+Après l'attaque, on détecte la transaction suivant la transaction qui a été supprimée.
+Le hash de la transaction détecté est recalculé et ne correspond pas au hash stocké car il est calculé avec la transaction précédente et celle-ci a été supprimée.
+On détecte donc l'attaque.
