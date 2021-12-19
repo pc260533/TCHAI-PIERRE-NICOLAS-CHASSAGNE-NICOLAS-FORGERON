@@ -236,3 +236,11 @@ __Attaque 1__
 Pour exécuter l'attaque 1, on exécute le fichier ```tchaiv2/tests/mainAttaque1.py```.
 Celui-ci crée deux utilisateurs, une transaction et modifie le montant de cette transaction.  
 Après l'attaque, on détecte les transactions qui ont été modfifiées grâce au hash de chaque transaction.
+
+### Exercice 8
+__Attaque 2__
+Pour exécuter l'attaque 2, on exécute le fichier ```tchaiv2/tests/mainAttaque2.py```.
+Celui-ci crée deux utilisateurs, trois transactions de test1 vers test 2.
+On supprime la première transaction de test1 vers test2.  
+Après l'attaque, on ne peut pas détecter la transaction qui a été supprimée grâce au hash de chaque transaction car la vérification se base sur le hash de chaque transaction de manière unitaire.
+On doit donc dans la version 3 calculer le hash avec la transaction en cours et les valeurs de la transaction précédente.

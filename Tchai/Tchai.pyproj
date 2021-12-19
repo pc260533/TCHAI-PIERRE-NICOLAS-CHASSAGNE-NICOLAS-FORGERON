@@ -77,6 +77,7 @@
     <Compile Include="tchai2\stockage\StockageBaseDeDonnees.py" />
     <Compile Include="tchai2\stockage\__init__.py" />
     <Compile Include="tchai2\tests\mainAttaque1.py" />
+    <Compile Include="tchai2\tests\mainAttaque2.py" />
     <Compile Include="tchai2\views\AfficherSoldeCompteView.py" />
     <Compile Include="tchai2\views\AfficherTransactionsAvecUtilisateurView.py" />
     <Compile Include="tchai2\views\AfficherTransactionsView.py" />
