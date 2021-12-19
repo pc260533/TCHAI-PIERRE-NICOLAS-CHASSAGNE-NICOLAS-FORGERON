@@ -196,3 +196,13 @@ Pour exécuter l'attaque 1, on exécute le fichier ```tchaiv1/tests/mainAttaque1
 Celui-ci crée deux utilisateurs, une transaction et modifie le montant de cette transaction.  
 Après l'attaque, il est impossible de savoir si le montant d'une transaction a été modifié.
 On doit donc dans la version 2 calculer le hash de la transaction en cours pour tester si elle a été modifiée.
+
+
+## Tchai v2
+Pour exécuter tchai v2, on exécute le fichier ```tchaiv2/main.py```.
+### Exercice 5
+Avant d'enregistrer une transaction, on calcule son hash en concaténant les noms d'utilisateur, le montant et la date de transaction.
+Par exemple le hash de la transaction ```test1test220.02021-12-17 11:10:02``` est :
+```7789c71739fa3f40e639798b9d18e47e```  
+La fonction de hachage est MD5.  
+L'API HTTP pour enregistrer une transaction reste la même.
