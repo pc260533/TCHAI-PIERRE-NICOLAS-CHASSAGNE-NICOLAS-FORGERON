@@ -230,3 +230,9 @@ La réponse envoyée est :
 
 </html>
 ```
+
+### Exercice 7
+__Attaque 1__
+Pour exécuter l'attaque 1, on exécute le fichier ```tchaiv2/tests/mainAttaque1.py```.
+Celui-ci crée deux utilisateurs, une transaction et modifie le montant de cette transaction.  
+Après l'attaque, on détecte les transactions qui ont été modfifiées grâce au hash de chaque transaction.
