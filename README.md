@@ -190,3 +190,9 @@ La réponse envoyée est :
 
 </html>
 ```
+### Exercice 4
+__Attaque 1__  
+Pour exécuter l'attaque 1, on exécute le fichier ```tchaiv1/tests/mainAttaque1.py```.
+Celui-ci crée deux utilisateurs, une transaction et modifie le montant de cette transaction.  
+Après l'attaque, il est impossible de savoir si le montant d'une transaction a été modifié.
+On doit donc dans la version 2 calculer le hash de la transaction en cours pour tester si elle a été modifiée.
