@@ -252,7 +252,7 @@ On doit donc dans la version 3 calculer le hash avec la transaction en cours et 
 
 
 ## Tchai v3
-Pour exécuter tchai v2, on exécute le fichier ```Tchai/tchai3/main.py```.
+Pour exécuter tchai v3, on exécute le fichier ```Tchai/tchai3/main.py```.
 ### Exercice 9
 Avant d'enregistrer une transaction, on calcule son hash en concatenant les noms d'utilisateur, le montant, la date de transaction et le hash de la transaction précédente.
 Pour le hash de la première transaction, on considère que le hash de la transaction précédente est une chaine de caractère vide.
@@ -270,29 +270,30 @@ Après l'attaque, on détecte les transactions qui ont été modfifié grâce au
 __Attaque 2__  
 Pour exécuter l'attaque 2, on exécute le fichier ```Tchai/tchai3/tests/mainAttaque2.py```.
 Celui-ci crée deux utilisateurs, trois transactions de test1 vers test 2.
-On supprimela première transaction de test1 vers test2.  
+On supprime la première transaction de test1 vers test2.  
 Après l'attaque, on détecte la transaction suivant la transaction qui a été supprimée.
 Le hash de la transaction détecté est recalculé et ne correspond pas au hash stocké car il est calculé avec la transaction précédente et celle-ci a été supprimée.
 On détecte donc l'attaque.
 
 ### Exercice 11
 __Attaque 3__  
-Pour exécuter l'attaque 2, on exécute le fichier ```Tchai/tchai3/tests/mainAttaque2.py```.
-Celui-ci crée deux utilisateurs, trois transactions de test1 vers test 2.
-On supprimela première transaction de test1 vers test2.  
-Après l'attaque, on détecte la transaction suivant la transaction qui a été supprimée.
-Le hash de la transaction détecté est recalculé et ne correspond pas au hash stocké car il est calculé avec la transaction précédente et celle-ci a été supprimée.
-On détecte donc l'attaque.
+Pour exécuter l'attaque 3, on exécute le fichier ```Tchai/tchai3/tests/mainAttaque3.py```.
+Celui-ci crée deux utilisateurs. On suppose que l'attaquant connait la méthode de calcul de hash et peut enregistrer des transactions.
+On insère une transaction de test1 vers test2.  
+Ici, l'utilisateur test2 utilise l'utilisateur test1 pour faire une transaction.  
+Après l'attaque, on ne peut pas détecter les transactions qui ont été supprimé
+L'attaque consite à ce que test2 falsifie l'identité de test1.  
+On doit donc dans la version 4 prouver que ce sont bien les utilisateurs qui effectue des transaction avec la cryptographie assymétrique.
 
 
 ## Tchai v4
-Pour exécuter tchai v2, on exécute le fichier ```Tchai/tchai4/main.py```.
+Pour exécuter tchai v4, on exécute le fichier ```Tchai/tchai4/main.py```.
 ### Exercice 13
 Pour qu'une transaction soit valide, il faut fournir en plus des deux noms d'utilisateurs et du montant une signature.  
 On génère une paire de clés RSA par utilisateur.  
 La signature est obtenue en signant la transaction hachée avec la clé privée.
 La clé publique permet de vérifier la signature de la transaction avant de l'enregistrer.  
-On vs'assure ainsi de l'authenticité de l'expéditeur.
+On s'assure ainsi de l'authenticité de l'expéditeur.
 
 On ajoute et on modifie les actions suivantes :
 -	__Ajouter un utilisateur__ :  
